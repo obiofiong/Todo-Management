@@ -13,6 +13,11 @@ app.use(errorHandlerMiddleware);
 app.use(express.json());
 
 // routes
+app.get("/", (req, res) => {
+  res.send(
+    "Todo management api created by John (https://github.com/obiofiong) is running."
+  );
+});
 app.use("/api/v1/tasks", tasks);
 app.use(notFound);
 
